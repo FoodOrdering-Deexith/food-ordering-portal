@@ -1,11 +1,31 @@
-<ion-card>
-  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-  <ion-card-header>
-    <ion-card-title>Card Title</ion-card-title>
-    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-  </ion-card-header>
+<ion-grid>
+  <ion-row>
+    <ion-col size="12" size-md="4" size-lg="3" *ngFor="let food of foods; let i = index">
+      <ion-card>
+        <img alt="Food Item Image"
+          src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        <ion-card-header>
+          <ion-row>
+            <ion-col>
+              <ion-card-title>{{food.name}}</ion-card-title> <span>{{food.type}}</span>
+            </ion-col>
+            <ion-col class="button-col">
+              <ion-button (click)="addToOrder(i)">
+                <ion-icon name="add-circle-outline"></ion-icon>
+              </ion-button>
+              <ion-button (click)="subtractFromOrder(i)">
+                <ion-icon name="remove-circle-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-card-subtitle>{{food.description}}</ion-card-subtitle>
 
-  <ion-card-content>
-    Here's a small text description for the card content. Nothing more, nothing less.
-  </ion-card-content>
-</ion-card>
+        </ion-card-header>
+        <ion-card-content>
+          <h6>{{food.price}}</h6>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-button (click)="placeOrder()" expand="block">Place Order</ion-button>
+</ion-grid>

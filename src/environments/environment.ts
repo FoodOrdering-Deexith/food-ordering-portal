@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   restaurant: "http://localhost:9091/",
   user: "http://USER-SERVICE/",
-  foodOrder: "http://FOOD-CATALOG-SERVICE"
+  foodOrder: "http://localhost:9093/"
 
 };
 

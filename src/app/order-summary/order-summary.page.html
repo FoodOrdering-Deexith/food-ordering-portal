@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Orders</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Order Summary</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,8 +13,7 @@
   </ion-header>
 
   <!-- Order Summary Content -->
-   <hr>
-  <ion-card *ngFor="let order of allOrders">
+  <ion-card>
     <ion-card-header>
       <ion-card-title>Order Details</ion-card-title>
     </ion-card-header>
@@ -39,4 +38,3 @@
     </ion-card-content>
   </ion-card>
 </ion-content>
-

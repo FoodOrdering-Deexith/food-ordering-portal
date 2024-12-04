@@ -11,7 +11,7 @@ import { IonicModule } from '@ionic/angular';
   declarations: [RestaurantlistComponent, FoodItemComponent],
   imports: [
     CommonModule,
-    IonicModule
+    IonicModule,
   ],
   providers: [
   ],

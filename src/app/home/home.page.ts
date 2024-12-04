@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
 import { SharedModule } from '../shared/shared.module';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,5 +11,6 @@ import { SharedModule } from '../shared/shared.module';
   imports: [IonHeader, IonToolbar, IonTitle, IonContent, SharedModule],
 })
 export class HomePage {
-  constructor() {}
+  constructor(private router: Router) {}
+
 }

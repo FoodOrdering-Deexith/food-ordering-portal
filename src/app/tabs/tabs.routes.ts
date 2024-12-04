@@ -27,6 +27,14 @@ export const routes: Routes = [
           import('../profile/profile.page').then((m) => m.ProfilePage),
       },
       {
+        path: ':id/food-list',
+        loadComponent: () => import('../food-list/food-list.page').then( m => m.FoodListPage)
+      },
+      {
+        path: 'order-summary/:id',
+        loadComponent: () => import('../order-summary/order-summary.page').then( m => m.OrderSummaryPage)
+      },
+      {
         path: '',
         redirectTo: '/home',
         pathMatch: 'full',

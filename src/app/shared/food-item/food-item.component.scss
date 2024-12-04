@@ -1,0 +1,23 @@
+.orderButton{
+  margin-left: 60%;
+}
+
+ion-icon{
+  color: whitesmoke;
+}
+
+.button-col {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  align-items: center;      /* Center vertically */
+  gap: 10px;                /* Add some spacing between buttons */
+}
+
+.orderButton {
+  font-size: 20px; /* Adjust icon size if needed */
+  --ion-color-primary: #3880ff; /* Example for button color */
+}
+
+ion-row{
+  align-items: center;
+}

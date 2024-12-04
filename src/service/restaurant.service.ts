@@ -11,7 +11,6 @@ export class RestaurantService {
 
 
   constructor(private http: HttpClient) {
-    console.log("htest");
   }
 
   getAllRestaurants():Observable<Restaurant[]>  {
